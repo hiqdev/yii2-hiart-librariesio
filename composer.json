@@ -1,0 +1,75 @@
+{
+    "name": "hiqdev/yii2-hiart-librariesio",
+    "type": "yii2-extension",
+    "description": "Libraries.io API implementation for yii2-hiart",
+    "keywords": [
+        "yii2",
+        "hiart",
+        "libraries.io"
+    ],
+    "homepage": "https://github.com/hiqdev/yii2-hiart-librariesio",
+    "license": "BSD-3-Clause",
+    "support": {
+        "email": "support@hiqdev.com",
+        "source": "https://github.com/hiqdev/yii2-hiart-librariesio",
+        "issues": "https://github.com/hiqdev/yii2-hiart-librariesio/issues",
+        "wiki": "https://github.com/hiqdev/yii2-hiart-librariesio/wiki",
+        "forum": "http://forum.hiqdev.com/"
+    },
+    "authors": [
+        {
+            "name": "Andrii Vasyliev",
+            "role": "Project lead",
+            "email": "sol@hiqdev.com",
+            "homepage": "http://hipanel.com/"
+        },
+        {
+            "name": "Dmitry Naumenko",
+            "role": "Lead backend developer",
+            "email": "d.naumenko.a@gmail.com",
+            "homepage": "http://silverfire.me/"
+        },
+        {
+            "name": "Andrey Klochok",
+            "role": "Lead frontend developer",
+            "email": "andreyklochok@gmail.com",
+            "homepage": "http://hiqdev.com/"
+        },
+        {
+            "name": "Yuriy Myronchuk",
+            "role": "QA Lead",
+            "email": "bladeroot@gmail.com",
+            "homepage": "http://hiqdev.com/"
+        }
+    ],
+    "require": {
+        "hiqdev/yii2-hiart": "<2.0 || *@dev"
+    },
+    "require-dev": {
+        "yiisoft/yii2": "dev-master",
+        "hiqdev/hidev-php": "<2.0 || dev-master",
+        "hiqdev/hidev-hiqdev": "<2.0 || dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "hiqdev\\hiart\\librariesio\\": "src",
+            "hiqdev\\hiart\\librariesio\\tests\\": "tests"
+        }
+    },
+    "extra": {
+        "config-plugin": {
+            "params": "src/config/params.php",
+            "common": "src/config/common.php",
+            "tests": [
+                "$common",
+                "src/config/tests.php"
+            ]
+        }
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ]
+}

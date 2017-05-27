@@ -1,0 +1,9 @@
+package:
+    type:           yii2-extension
+    name:           yii2-hiart-librariesio
+    title:          Libraries.io API implementation for yii2-hiart
+    headline:       Yii2 HiArt Github
+    keywords:       yii2, hiart, libraries.io
+    description:    |
+        This package provides [Libraries.io API](https://libraries.io/api) implementation
+        for [yii2-hiart](https://github.com/hiqdev/yii2-hiart).
