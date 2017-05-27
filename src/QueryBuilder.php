@@ -27,4 +27,14 @@ class QueryBuilder extends \hiqdev\hiart\rest\QueryBuilder
 
         return $this->from . 's';
     }
+
+    public function buildQueryParams(Query $query)
+    {
+        $params = parent::buildQueryParams($query);
+        if ($query->limit) {
+            $params['per_page'] = $query->limit;
+        }
+
+        return $params;
+    }
 }

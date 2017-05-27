@@ -16,7 +16,7 @@ class ProjectTest extends \PHPUnit\Framework\TestCase
 {
     public function testFindByName()
     {
-        $query = Project::find()->where(['q' => 'jquery']);
+        $query = Project::find()->where(['q' => 'jquery'])->limit(2);
         $this->checkFound($query);
     }
 
@@ -24,7 +24,7 @@ class ProjectTest extends \PHPUnit\Framework\TestCase
     {
         $models = $query->all();
 
-        $this->assertGreaterThan(1, count($models));
+        $this->assertSame(2, count($models));
         $this->assertInstanceOf(Project::class, reset($models));
     }
 }
