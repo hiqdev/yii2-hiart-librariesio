@@ -19,7 +19,7 @@ class Connection extends \hiqdev\hiart\rest\Connection implements ConnectionInte
 {
     public $queryBuilderClass = QueryBuilder::class;
 
-    public $baseUri = 'https://libraries.io/api';
+    public $baseUri = 'https://libraries.io/api/';
 
     public static $dbname = 'librariesio';
 

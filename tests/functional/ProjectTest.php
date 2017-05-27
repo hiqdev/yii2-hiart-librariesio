@@ -10,19 +10,13 @@
 
 namespace hiqdev\hiart\librariesio\tests\functional;
 
-use hiqdev\hiart\librariesio\models\Repo;
+use hiqdev\hiart\librariesio\models\Project;
 
 class ProjectTest extends \PHPUnit\Framework\TestCase
 {
-    public function testFindByOrganization()
+    public function testFindByName()
     {
-        $query = Repo::find()->where(['organization' => 'hiqdev']);
-        $this->checkFound($query);
-    }
-
-    public function testFindByUser()
-    {
-        $query = Repo::find()->where(['user' => 'hiqsol']);
+        $query = Project::find()->where(['q' => 'jquery']);
         $this->checkFound($query);
     }
 
@@ -31,6 +25,6 @@ class ProjectTest extends \PHPUnit\Framework\TestCase
         $models = $query->all();
 
         $this->assertGreaterThan(1, count($models));
-        $this->assertInstanceOf(Repo::class, reset($models));
+        $this->assertInstanceOf(Project::class, reset($models));
     }
 }
