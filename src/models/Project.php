@@ -20,6 +20,11 @@ use hiqdev\hiart\librariesio\ActiveRecord;
  */
 class Project extends ActiveRecord
 {
+    public static function primaryKey()
+    {
+        return ['name', 'platform'];
+    }
+
     public function rules()
     {
         return [
