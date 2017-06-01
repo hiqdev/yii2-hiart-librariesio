@@ -28,7 +28,6 @@ class Project extends ActiveRecord
     public function rules()
     {
         return [
-            ['id', 'number'],
             ['name', 'string'],
             ['platform', 'string'],
             ['description', 'string'],
