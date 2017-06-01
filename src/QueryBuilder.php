@@ -33,6 +33,9 @@ class QueryBuilder extends \hiqdev\hiart\rest\QueryBuilder
         $params = parent::buildQueryParams($query);
         if ($query->limit) {
             $params['per_page'] = $query->limit;
+            if ($query->offset) {
+                $params['page'] = 1 + $query->offset/$query->limit;
+            }
         }
 
         return $params;
