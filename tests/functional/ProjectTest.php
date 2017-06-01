@@ -14,6 +14,13 @@ use hiqdev\hiart\librariesio\models\Project;
 
 class ProjectTest extends \PHPUnit\Framework\TestCase
 {
+    public function testCount()
+    {
+        $total = Project::find()->where(['q' => 'jquery'])->count();
+
+        $this->assertGreaterThan(1, $total);
+    }
+
     public function testFindByName()
     {
         $query = Project::find()->where(['q' => 'jquery'])->limit(2);

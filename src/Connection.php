@@ -17,6 +17,8 @@ namespace hiqdev\hiart\librariesio;
  */
 class Connection extends \hiqdev\hiart\rest\Connection implements ConnectionInterface
 {
+    public $activeQueryClass = ActiveQuery::class;
+
     public $queryBuilderClass = QueryBuilder::class;
 
     public $baseUri = 'https://libraries.io/api/';
