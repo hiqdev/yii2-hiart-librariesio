@@ -31,6 +31,10 @@ class QueryBuilder extends \hiqdev\hiart\rest\QueryBuilder
     public function buildQueryParams(Query $query)
     {
         $params = parent::buildQueryParams($query);
+        $auth = $this->db->getAuth();
+        if (!empty($auth)) {
+            $params = array_merge($params, $auth);
+        }
         if ($query->limit) {
             $params['per_page'] = $query->limit;
             if ($query->offset) {
